@@ -1,5 +1,3 @@
-import { div } from "motion/react-client";
-
 export const Logo = () => {
   return (
     <svg

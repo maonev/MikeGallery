@@ -33,7 +33,7 @@ export const Hero = () => {
           <button
             key={filter.value}
             onClick={() => setActiveFilter(filter.value)}
-            className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+            className={`px-6 py-2 rounded-full font-medium transition-all duration-300 hover:cursor-pointer ${
               activeFilter === filter.value
                 ? "bg-primary text-white"
                 : "bg-dark-light text-gray-400 hover:bg-primary/20 hover:text-primary"
@@ -47,7 +47,7 @@ export const Hero = () => {
         {filteredProjects.map((project) => (
           <motion.div
             key={project.id}
-            className="bg-dark-light rounded-2xl border border-gray-800 overflow-hidden card-hover group"
+            className="bg-dark-light rounded-lg border border-gray-800 overflow-hidden card-hover group"
             variants={itemSequence}>
             <div className="aspect-video bg-linear-to-br from-primary/20 to-transparent flex items-center justify-center relative overflow-hidden">
               <div className="text-8xl">{project.image}</div>
