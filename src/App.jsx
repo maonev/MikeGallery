@@ -5,19 +5,23 @@ import { AboutPage } from "./pages/About/AboutPage";
 import { WorkPage } from "./pages/Work/WorkPage";
 import { ExperiencePage } from "./pages/Experience/ExperiencePage";
 import { HomePage } from "./pages/Home/HomePage";
+import { Alert } from "./components/Alert";
 
 function App() {
   return (
-    <div className="min-h-screen bg-dark">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/work" element={<WorkPage />} />
-        <Route path="/experience" element={<ExperiencePage />} />
-      </Routes>
-      <Footer />
-    </div>
+    <>
+      <Alert />
+      <div className="min-h-screen bg-dark">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/work" element={<WorkPage />} />
+          <Route path="/experience" element={<ExperiencePage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </>
   );
 }
 
